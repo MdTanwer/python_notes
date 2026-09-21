@@ -1,6 +1,6 @@
 # Python Deep Mastery Syllabus
- 20/09/2026
-
+ 20/09/2026 target 30/09/2026
+             
 ---
 
 ## PHASE 1: Language Semantics (Deep Foundation)
@@ -231,38 +231,6 @@
 - **Ray**: actors, remote functions, object store, cluster computing
 
 ---
-
-## PHASE 17: Contributing to CPython
-
-- **Reading the codebase**: `Objects/`, `Python/`, `Include/` layout
-- **Building CPython from source**: `./configure`, `--with-pydebug`, debug builds
-- **The PEP process**: how features get proposed and accepted
-- **Your first patch**: issue triage, devguide, running `regrtest`, PR workflow
-
----
-
-## CPython Source Code Reference
-
-Key files to actually read in the CPython repo:
-
-| File / Path | What it covers |
-|---|---|
-| `Include/object.h`, `Include/cpython/object.h` | `PyObject`, `PyTypeObject` |
-| `Objects/dictobject.c`, `listobject.c`, `setobject.c`, `unicodeobject.c`, `longobject.c`, `tupleobject.c` | Core data structures |
-| `Objects/typeobject.c` | `type_new`, `slot_*`, MRO, `super` |
-| `Objects/funcobject.c`, `genobject.c`, `frameobject.c`, `descrobject.c` | Functions, generators, frames |
-| `Objects/obmalloc.c` | pymalloc |
-| `Python/ceval.c`, `Python/bytecodes.c` (DSL), `generated_cases.c.h`, `specialize.c` | Interpreter loop |
-| `Python/compile.c`, `flowgraph.c`, `symtable.c`, `Parser/parser.c`, `Grammar/python.gram` | Compiler pipeline |
-| `Python/import.c`, `Lib/importlib/_bootstrap.py`, `_bootstrap_external.py` | Import system |
-| `Modules/gcmodule.c` / `Python/gc.c` | Garbage collector |
-| `Python/pylifecycle.c`, `Python/pystate.c` | `PyThreadState`, `PyInterpreterState` |
-| `Lib/asyncio/` (`base_events.py`, `tasks.py`, `futures.py`), `Modules/_asynciomodule.c` | asyncio |
-| `Lib/functools.py`, `dataclasses.py`, `enum.py`, `typing.py`, `abc.py` + `Modules/_abc.c` | Standard library internals |
-
-- Read the [Python Developer's Guide](https://devguide.python.org) and the "Internals" section
-- Build CPython from source with `--with-pydebug`, use `sys.getrefcount` and `gc.get_objects` in debug mode
-
 ---
 
 ## Standard Library Deep Cuts
